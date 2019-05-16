@@ -1,6 +1,29 @@
 
 
-#Vehicle Detection Project
+# Vehicle Detection Project
+
+In this project I write a software pipeline to detect vehicles in a video.
+
+Here are links to the labeled data for [vehicle](https://s3.amazonaws.com/udacity-sdc/Vehicle_Tracking/vehicles.zip) and [non-vehicle](https://s3.amazonaws.com/udacity-sdc/Vehicle_Tracking/non-vehicles.zip) examples to train your classifier.  These example images come from a combination of the [GTI vehicle image database](http://www.gti.ssr.upm.es/data/Vehicle_database.html), the [KITTI vision benchmark suite](http://www.cvlibs.net/datasets/kitti/), and examples extracted from the project video itself.   You are welcome and encouraged to take advantage of the recently released [Udacity labeled dataset](https://github.com/udacity/self-driving-car/tree/master/annotations) to augment your training data.  
+
+# Dependencies
+
+* `Moviepy`
+* `sklearn`
+* `numpy`
+* `matplotlib`
+* `OpenCV`
+
+# Run Instructions
+
+``` bash
+
+git clone 
+cd vehicle-detection
+sudo pip install -r requirements.txt
+jupyter notebook detection.ipynb
+
+```
 
 ## Pipeline
 
@@ -8,7 +31,7 @@
 * Optionally, you can also apply a color transform and append binned color features, as well as histograms of color, to your HOG feature vector. 
 * Note: for those first two steps don't forget to normalize your features and randomize a selection for training and testing.
 * Implement a sliding-window technique and use your trained classifier to search for vehicles in images.
-* Run your pipeline on a video stream (start with the test_video.mp4 and later implement on full project_video.mp4) and create a heat map of recurring detections frame by frame to reject outliers and follow detected vehicles.
+* Run your pipeline on a video stream  and create a heat map of recurring detections frame by frame to reject outliers and follow detected vehicles.
 * Estimate a bounding box for vehicles detected.
 
 [//]: # (Image References)
@@ -41,7 +64,7 @@ Here is an example using the `YCrCb` color space and HOG parameters of `orientat
 
 ### Sliding Window Search
 
-#### 1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
+I used a sliding window techniques to search through each video frame to identy possible car detections. The size of the sliding window vary accoring to the scale parameter which allows the window to scale up/down as cars appear smaller/bigger when closer/far away in the frame,  
 
 
 
@@ -57,7 +80,9 @@ Ultimately I searched on two scales using YCrCb 3-channel HOG features plus spat
 ### Video Implementation
 
 
-Here's a [link to my video result](./output_video/project_video.mp4)
+
+[![Demo video](Images/g.gif)](https://www.youtube.com/watch?v=tYOks_UcLcs&feature=youtu.be)
+
 
 
 
