@@ -81,7 +81,7 @@ Ultimately I searched on two scales using YCrCb 3-channel HOG features plus spat
 
 
 
-[![Demo video](Images/g.gif)](https://www.youtube.com/watch?v=tYOks_UcLcs&feature=youtu.be)
+[![Demo video](output_video/g.gif)](https://www.youtube.com/watch?v=tYOks_UcLcs&feature=youtu.be)
 
 
 
